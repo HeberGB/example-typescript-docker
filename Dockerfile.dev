@@ -1,0 +1,11 @@
+FROM node:10.14.2-alpine
+
+ADD . /app
+WORKDIR /app
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
