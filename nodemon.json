@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "ignore": ["src/**/*.spec.ts"],
+  "watch": ["src/**/*.ts"],
+  "execMap": {
+    "ts": "ts-node"
+  }
+}
