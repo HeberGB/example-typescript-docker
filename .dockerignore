@@ -1,0 +1,8 @@
+.git
+.gitignore
+src
+Dockerfile
+Dockerfile.dev
+README.md
+nodemon.json
+tsconfig.json
