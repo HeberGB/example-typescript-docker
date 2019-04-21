@@ -1,11 +1,8 @@
-FROM node:10.14.2-alpine
+FROM node:10.15.3-alpine
 
-ADD . /app
-WORKDIR /app
-COPY package.json .
+WORKDIR /home/node/app
+ADD package*.json ./
 
-RUN npm install
+RUN npm i
 
-COPY . .
-
-EXPOSE 8080
+USER node
