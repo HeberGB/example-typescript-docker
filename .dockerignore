@@ -1,8 +1,12 @@
 .git
 .gitignore
 src
+node_modules
+.dockerignore
 Dockerfile
 Dockerfile.dev
+docker-compose.yml
 README.md
+LICENSE
 nodemon.json
 tsconfig.json

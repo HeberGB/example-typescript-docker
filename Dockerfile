@@ -1,20 +1,13 @@
-FROM node:10.14.2-alpine
+FROM node:10.15.3-alpine
 
-ADD . /app
-WORKDIR /app
-COPY package.json .
+WORKDIR /home/node/app
+ADD . .
 
-RUN npm install --production
+ENV NODE_ENV=production
+RUN npm ci
 
-COPY . .
-
-RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \
-  && mkdir -p /home/pptruser/Downloads \
-  && chown -R pptruser:pptruser /home/pptruser \
-  && chown -R pptruser:pptruser /app
-
-USER pptruser
+USER node
 
 EXPOSE 8080
 
-CMD [ "npm", "start" ]
+CMD [ "node", "build/index.js" ]
