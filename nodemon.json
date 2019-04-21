@@ -3,6 +3,6 @@
   "ignore": ["src/**/*.spec.ts"],
   "watch": ["src/**/*.ts"],
   "execMap": {
-    "ts": "ts-node"
+    "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register"
   }
 }
